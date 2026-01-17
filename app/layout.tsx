@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
+import { Lora } from "next/font/google";
 import "./globals.css";
+
+const lora = Lora({
+  subsets: ["latin"],
+  display: "swap",
+});
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -16,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex min-h-screen flex-col bg-white text-neutral-900 antialiased">
+      <body className={`${lora.className} flex min-h-screen flex-col bg-white text-neutral-900 antialiased`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

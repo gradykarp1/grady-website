@@ -4,6 +4,7 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, UIMessage } from "ai";
 import { useEffect, useRef, useState, useMemo } from "react";
 import { gradyProfile } from "@/data/grady-profile";
+import ReactMarkdown from "react-markdown";
 
 function getMessageText(message: UIMessage): string {
   return message.parts
@@ -141,9 +142,15 @@ export default function AIChat({ isOpen, onClose }: AIChatProps) {
                     : "bg-neutral-100 text-neutral-900 rounded-bl-md"
                 }`}
               >
-                <p className="text-sm whitespace-pre-wrap leading-relaxed">
-                  {getMessageText(msg)}
-                </p>
+                {msg.role === "user" ? (
+                  <p className="text-sm whitespace-pre-wrap leading-relaxed">
+                    {getMessageText(msg)}
+                  </p>
+                ) : (
+                  <div className="text-sm leading-relaxed prose prose-sm prose-neutral max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-0.5 prose-strong:text-neutral-900 prose-headings:text-neutral-900 prose-headings:mt-3 prose-headings:mb-2">
+                    <ReactMarkdown>{getMessageText(msg)}</ReactMarkdown>
+                  </div>
+                )}
               </div>
             </div>
           ))}

@@ -16,6 +16,12 @@ export async function getExperiencesFromBlob(): Promise<Experience[] | null> {
     return experiencesCache.data;
   }
 
+  // Check if blob token is configured
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    console.error("BLOB_READ_WRITE_TOKEN is not configured");
+    throw new Error("Blob storage not configured - missing BLOB_READ_WRITE_TOKEN");
+  }
+
   try {
     // List blobs to find our experiences file
     const { blobs } = await list({ prefix: "profile/" });
@@ -46,7 +52,7 @@ export async function getExperiencesFromBlob(): Promise<Experience[] | null> {
     return experiences;
   } catch (error) {
     console.error("Failed to read experiences from blob:", error);
-    return null;
+    throw error; // Re-throw so callers know about the failure
   }
 }
 

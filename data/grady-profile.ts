@@ -18,7 +18,7 @@ export const gradyProfile = {
         "Drove company-wide reliability improvements (SLO culture)",
         "Co-led organization's AI-usage transformation",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "Indeed needed architectural clarity and execution alignment across a massive engineering org",
         approach:
@@ -27,7 +27,7 @@ export const gradyProfile = {
           "Architecture reviews, reliability engineering, technical debt prioritization",
         lessonsLearned:
           "Scaling influence requires both technical credibility and organizational design skills",
-      },
+      }],
     },
     {
       company: "Indeed",
@@ -39,7 +39,7 @@ export const gradyProfile = {
         "Improved interoperability and reduced duplication across services and teams",
         "Led technical reviews for mission-critical, large-scale initiatives",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "Indeed needed unified architectural vision across diverse product lines",
         approach:
@@ -48,7 +48,7 @@ export const gradyProfile = {
           "Architecture reviews, service consolidation, technical strategy",
         lessonsLearned:
           "Effective architecture requires balancing product velocity with platform coherence",
-      },
+      }],
     },
     {
       company: "Indeed",
@@ -62,7 +62,7 @@ export const gradyProfile = {
         "Ideated and built Indeed's Candidate Platform",
         "Cross-company champion for operational excellence",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "SMB org needed scaling, reorganization, and platform modernization",
         approach: "Domain-centric reorg, aggressive hiring, platform thinking",
@@ -70,7 +70,7 @@ export const gradyProfile = {
           "Candidate ingest/search, workflow automation, data pipelines, analytics/reporting",
         lessonsLearned:
           "10X growth requires both technical platform and organizational foundation",
-      },
+      }],
     },
     {
       company: "Amazon Web Services",
@@ -82,7 +82,7 @@ export const gradyProfile = {
         "Built 2019 roadmap, presented scaling plans to AWS Leadership",
         "Operational owner for fleet of VMs, internal processes, and service quality",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "AWS Organizations was a critical platform service needing scale and team growth",
         approach:
@@ -91,7 +91,7 @@ export const gradyProfile = {
           "Console, CLI, SDK spanning entire AWS service offering; security and compliance policies",
         lessonsLearned:
           "Tier-1 services require operational excellence and executive alignment",
-      },
+      }],
     },
     {
       company: "Dell EMC (Isilon)",
@@ -105,7 +105,7 @@ export const gradyProfile = {
         "Created root-cause analysis ('5 Whys') and problem-solving ('A3s') practices",
         "Recruited, hired, and developed managers and principal-level developers",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "Isilon needed modern control plane and development practices",
         approach:
@@ -114,7 +114,7 @@ export const gradyProfile = {
           "React/Redux + Python web services, RESTful APIs and SDKs, configuration, management, monitoring, analytics",
         lessonsLearned:
           "Product excellence requires tight integration of UX and engineering",
-      },
+      }],
     },
     {
       company: "Amazon",
@@ -127,7 +127,7 @@ export const gradyProfile = {
         "Owner for Shopping, Privacy, and Accessibility features",
         "Coordinated post-launch product planning across PM organization",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "Amazon was creating an entirely new product category (smart speakers)",
         approach:
@@ -136,7 +136,7 @@ export const gradyProfile = {
           "Multi-platform apps, voice UI, ecosystem services, multi-modal shopping",
         lessonsLearned:
           "0-to-1 products require balancing vision with execution constraints",
-      },
+      }],
     },
     {
       company: "SignalSet",
@@ -149,7 +149,7 @@ export const gradyProfile = {
         "Architected highly available, scalable cloud technology stack",
         "Key driver of Lean Startup thinking within the company",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "Early-stage startup needed technical leadership and product development",
         approach:
@@ -158,7 +158,7 @@ export const gradyProfile = {
           "Highly available and scalable systems, RDBMS and NoSQL environments",
         lessonsLearned:
           "Startups require wearing multiple hats and rapid iteration",
-      },
+      }],
     },
     {
       company: "Point B",
@@ -169,7 +169,7 @@ export const gradyProfile = {
         "Led enterprise modernization and large-scale technology programs",
         "Built decision frameworks enabling organizations to align faster and execute with clarity",
       ],
-      aiContext: {
+      aiContext: [{
         situation:
           "Clients needed strategic guidance on technology and organizational change",
         approach:
@@ -178,7 +178,7 @@ export const gradyProfile = {
           "Enterprise modernization, technology strategy, decision frameworks",
         lessonsLearned:
           "External perspective can accelerate organizational alignment and execution",
-      },
+      }],
     },
   ],
 

@@ -4,18 +4,25 @@ export function buildSystemPrompt(): string {
   const { name, title, summary, experience, skills, education } = gradyProfile;
 
   const experienceContext = experience
-    .map(
-      (exp) => `
+    .map((exp) => {
+      const contextDetails = exp.aiContext
+        .map((ctx, idx) => {
+          const ctxTitle = "title" in ctx && ctx.title ? ` (${ctx.title})` : exp.aiContext.length > 1 ? ` ${idx + 1}` : "";
+          return `
+Context${ctxTitle}:
+- Situation: ${ctx.situation}
+- Approach: ${ctx.approach}
+- Technical work: ${ctx.technicalWork}
+- Key lessons: ${ctx.lessonsLearned}`;
+        })
+        .join("\n");
+
+      return `
 ## ${exp.company} - ${exp.role} (${exp.period})
 Key accomplishments: ${exp.highlights.join("; ")}
-
-Context for deeper questions:
-- Situation: ${exp.aiContext.situation}
-- Approach: ${exp.aiContext.approach}
-- Technical work: ${exp.aiContext.technicalWork}
-- Key lessons: ${exp.aiContext.lessonsLearned}
-`
-    )
+${contextDetails}
+`;
+    })
     .join("\n");
 
   const skillsContext = `

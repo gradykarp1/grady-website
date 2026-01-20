@@ -74,7 +74,8 @@ export async function saveExperiencesToBlob(
       access: "public",
       contentType: "application/json",
       addRandomSuffix: false,
-      token, // Explicitly pass token
+      allowOverwrite: true,
+      token,
     }
   );
 

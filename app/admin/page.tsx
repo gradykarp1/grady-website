@@ -4,14 +4,17 @@ import { useState, useEffect, useCallback } from "react";
 import LoginForm from "@/components/admin/LoginForm";
 import ExperienceList from "@/components/admin/ExperienceList";
 import ExperienceForm from "@/components/admin/ExperienceForm";
+import ChatLogsViewer from "@/components/admin/ChatLogsViewer";
 import type { ExperienceWithId, Experience } from "@/types/experience";
 
 type View = "list" | "add" | "edit";
+type Tab = "experiences" | "chat-logs";
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
   const [experiences, setExperiences] = useState<ExperienceWithId[]>([]);
   const [view, setView] = useState<View>("list");
+  const [tab, setTab] = useState<Tab>("experiences");
   const [editingExperience, setEditingExperience] =
     useState<ExperienceWithId | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -151,25 +154,40 @@ export default function AdminPage() {
     <div className="py-16 md:py-24">
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-8 flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-neutral-900">
-            Manage Experience
-          </h1>
-          <div className="flex gap-4">
-            {view === "list" && (
-              <button
-                onClick={() => setView("add")}
-                className="rounded-lg bg-neutral-900 px-4 py-2 font-medium text-white transition-colors hover:bg-neutral-800"
-              >
-                Add Experience
-              </button>
-            )}
-            <button
-              onClick={handleLogout}
-              className="rounded-lg border border-neutral-300 px-4 py-2 font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
-            >
-              Logout
-            </button>
-          </div>
+          <h1 className="text-3xl font-bold text-neutral-900">Admin</h1>
+          <button
+            onClick={handleLogout}
+            className="rounded-lg border border-neutral-300 px-4 py-2 font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
+          >
+            Logout
+          </button>
+        </div>
+
+        {/* Tab Navigation */}
+        <div className="mb-6 flex gap-2 border-b border-neutral-200">
+          <button
+            onClick={() => {
+              setTab("experiences");
+              setView("list");
+            }}
+            className={`px-4 py-2 font-medium transition-colors -mb-px ${
+              tab === "experiences"
+                ? "text-neutral-900 border-b-2 border-neutral-900"
+                : "text-neutral-500 hover:text-neutral-700"
+            }`}
+          >
+            Experiences
+          </button>
+          <button
+            onClick={() => setTab("chat-logs")}
+            className={`px-4 py-2 font-medium transition-colors -mb-px ${
+              tab === "chat-logs"
+                ? "text-neutral-900 border-b-2 border-neutral-900"
+                : "text-neutral-500 hover:text-neutral-700"
+            }`}
+          >
+            Chat Logs
+          </button>
         </div>
 
         {error && (
@@ -184,32 +202,53 @@ export default function AdminPage() {
           </div>
         )}
 
-        {view === "list" && (
-          <ExperienceList
-            experiences={experiences}
-            onEdit={(exp) => {
-              setEditingExperience(exp);
-              setView("edit");
-            }}
-            onDelete={handleDelete}
-            onReorder={handleReorder}
-          />
+        {/* Experiences Tab */}
+        {tab === "experiences" && (
+          <>
+            {view === "list" && (
+              <>
+                <div className="mb-4 flex justify-end">
+                  <button
+                    onClick={() => setView("add")}
+                    className="rounded-lg bg-neutral-900 px-4 py-2 font-medium text-white transition-colors hover:bg-neutral-800"
+                  >
+                    Add Experience
+                  </button>
+                </div>
+                <ExperienceList
+                  experiences={experiences}
+                  onEdit={(exp) => {
+                    setEditingExperience(exp);
+                    setView("edit");
+                  }}
+                  onDelete={handleDelete}
+                  onReorder={handleReorder}
+                />
+              </>
+            )}
+
+            {view === "add" && (
+              <ExperienceForm
+                onSubmit={handleAdd}
+                onCancel={() => setView("list")}
+              />
+            )}
+
+            {view === "edit" && editingExperience && (
+              <ExperienceForm
+                experience={editingExperience}
+                onSubmit={(exp) => handleUpdate(editingExperience.id, exp)}
+                onCancel={() => {
+                  setEditingExperience(null);
+                  setView("list");
+                }}
+              />
+            )}
+          </>
         )}
 
-        {view === "add" && (
-          <ExperienceForm onSubmit={handleAdd} onCancel={() => setView("list")} />
-        )}
-
-        {view === "edit" && editingExperience && (
-          <ExperienceForm
-            experience={editingExperience}
-            onSubmit={(exp) => handleUpdate(editingExperience.id, exp)}
-            onCancel={() => {
-              setEditingExperience(null);
-              setView("list");
-            }}
-          />
-        )}
+        {/* Chat Logs Tab */}
+        {tab === "chat-logs" && <ChatLogsViewer />}
       </div>
     </div>
   );

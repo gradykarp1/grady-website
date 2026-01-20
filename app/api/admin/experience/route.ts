@@ -53,8 +53,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, id: 0 });
   } catch (error) {
     console.error("Add experience error:", error);
+    const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: "Failed to add experience" },
+      { error: `Failed to add experience: ${message}` },
       { status: 500 }
     );
   }

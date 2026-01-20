@@ -44,8 +44,9 @@ export async function PUT(
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Update experience error:", error);
+    const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: "Failed to update experience" },
+      { error: `Failed to update experience: ${message}` },
       { status: 500 }
     );
   }

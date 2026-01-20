@@ -39,8 +39,9 @@ export async function PUT(req: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Reorder experiences error:", error);
+    const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: "Failed to reorder experiences" },
+      { error: `Failed to reorder experiences: ${message}` },
       { status: 500 }
     );
   }

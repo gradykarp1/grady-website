@@ -10,17 +10,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   const services = [
-    {
-      title: "Executive Coaching",
-      description:
-        "One-on-one leadership coaching for engineering executives and aspiring leaders. Develop your leadership skills, navigate complex organizational challenges, and accelerate your career growth.",
-      features: [
-        "Personalized coaching sessions",
-        "Leadership style assessment",
-        "Strategic thinking development",
-        "Communication skills enhancement",
-      ],
-    },
+    
     {
       title: "Technical Strategy Consulting",
       description:
@@ -30,6 +20,17 @@ export default function ServicesPage() {
         "Architecture reviews",
         "Build vs. buy analysis",
         "Technical debt assessment",
+      ],
+    },
+    {
+      title: "Leadership Coaching",
+      description:
+        "One-on-one leadership coaching for leaders. Develop your leadership skills, navigate complex organizational challenges, and accelerate your career growth.",
+      features: [
+        "Personalized coaching sessions",
+        "Leadership style assessment",
+        "Strategic thinking development",
+        "Communication skills enhancement",
       ],
     },
     {

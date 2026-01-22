@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { staticProfile } from "@/data/static-profile";
+import { gradyProfile } from "@/data/grady-profile";
 
-const DISPLAY_DURATION_MS = 6000; // 6 seconds per quotation
+const DISPLAY_DURATION_MS = 7000; // 7 seconds per quotation
 const FADE_DURATION_MS = 500;
 
 export default function QuotationCarousel() {
-  const testimonials = staticProfile.testimonials;
+  const testimonials = gradyProfile.testimonials;
   const [currentIndex, setCurrentIndex] = useState(() =>
     Math.floor(Math.random() * testimonials.length)
   );

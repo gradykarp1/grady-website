@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       return new Response("Invalid request body", { status: 400 });
     }
 
-    const systemPrompt = await buildSystemPrompt();
+    const systemPrompt = buildSystemPrompt();
 
     // Convert UIMessage format (parts array) to ModelMessage format (content)
     const modelMessages = await convertToModelMessages(messages as UIMessage[]);

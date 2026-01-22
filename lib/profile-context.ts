@@ -1,11 +1,7 @@
-import { staticProfile } from "@/data/static-profile";
-import { getExperiences } from "./profile-writer";
+import { gradyProfile } from "@/data/grady-profile";
 
-export async function buildSystemPrompt(): Promise<string> {
-  const { name, title, summary, skills, education, testimonials } = staticProfile;
-
-  // Fetch experiences from Blob storage at runtime
-  const experience = await getExperiences();
+export function buildSystemPrompt(): string {
+  const { name, title, summary, skills, education, testimonials, experience } = gradyProfile;
 
   const experienceContext = experience
     .map((exp) => {

@@ -3,7 +3,7 @@
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, UIMessage } from "ai";
 import { useEffect, useRef, useState, useMemo } from "react";
-import { staticProfile } from "@/data/static-profile";
+import { gradyProfile } from "@/data/grady-profile";
 import ReactMarkdown from "react-markdown";
 
 function getMessageText(message: UIMessage): string {
@@ -168,7 +168,7 @@ ${jobDescription}`;
                     Get honest, detailed answers.
                   </p>
                   <div className="w-full max-w-md space-y-2">
-                    {staticProfile.suggestedQuestions.map((q, i) => (
+                    {gradyProfile.suggestedQuestions.map((q, i) => (
                       <button
                         key={i}
                         onClick={() => handleSuggestedQuestion(q)}

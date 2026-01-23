@@ -7,6 +7,15 @@ export const gradyProfile = {
   summary: `Strategic technology and business leader operating at the intersection of architecture, organizational design, and product strategy. Expert in defining and executing multi-year engineering strategies, establishing architectural governance, and shaping high-scale R&D operating models.`,
 
   experience: [
+    {company: "Personal projects",
+      role: "gradykarp.com",
+      period: "2026 – present",
+      highlights: [
+        "Personal website with AI-powered feature that lets people ask questions about my experience and skills",
+        "LangGraph & Claude SDK project that does research and generates reports about the state of the US power grid",
+        "Family coordinator that intelligently manages family events, resources, and handles calendar conflicts",
+      ],
+    },
     {
       company: "Indeed",
       role: "Distinguished Technical Fellow, Technical Chief of Staff",
@@ -61,7 +70,18 @@ export const gradyProfile = {
           "Architecture reviews, service consolidation, technical strategy",
         lessonsLearned:
           "Effective architecture requires balancing product velocity with platform coherence",
-      }],
+      },
+      {
+        situation:
+          "Indeed leadership identified endemic quality concerns across our products and infrastructure. Frequent, large-scale incidents were impacting customer trust and consuming significant engineering bandwidth",
+        approach:
+          "Chartered Indeed's Quality Advisory Council, a cross-functional, cross-organizational team. The QAC was responsible for defining quality standards, metrics, and improvements that would lead to significant quality improvements.",
+        technicalWork:
+          "Scaled operational excellence reviews across all systems that supported Signature Features",
+        lessonsLearned:
+          "Quality is something that we know is missing, but hard to define. The QAC was a powerful mechanism for helping teams prioritize their own quality improvements and get implicit leadership support for doing so." ,
+      }
+    ],
     },
     {
       company: "Indeed",
@@ -345,7 +365,7 @@ export const gradyProfile = {
 
   suggestedQuestions: [
     "Would Grady be a good fit for a fractional CTO role at a Series B startup?",
-    "How does Grady approach organizationa management and mentorship?",
+    "How does Grady approach organizational management and mentorship?",
     "What's Grady's experience with organizational transformation and operating models?",
     "Tell me about Grady's cross-functional collaboration and leadership.",
   ],

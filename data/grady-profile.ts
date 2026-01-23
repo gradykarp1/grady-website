@@ -15,6 +15,16 @@ export const gradyProfile = {
         "LangGraph & Claude SDK project that does research and generates reports about the state of the US power grid",
         "Family coordinator that intelligently manages family events, resources, and handles calendar conflicts",
       ],
+      aiContext: [{
+        situation:
+          "Wanted to showcase technical skills and create useful tools for personal and family use",
+        approach:
+          "Built practical AI-powered applications using modern frameworks and LLM APIs",
+        technicalWork:
+          "Next.js, TypeScript, LangGraph, Claude SDK, AI chat interfaces, automated research pipelines",
+        lessonsLearned:
+          "Hands-on AI development reinforces that practical applications require thoughtful prompt engineering and system design",
+      }],
     },
     {
       company: "Indeed",

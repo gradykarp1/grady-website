@@ -345,9 +345,9 @@ export const gradyProfile = {
 
   suggestedQuestions: [
     "Would Grady be a good fit for a fractional CTO role at a Series B startup?",
-    "How did Grady scale Indeed's SMB Candidates engineering org from 23 to 85 people?",
+    "How does Grady approach organizationa management and mentorship?",
     "What's Grady's experience with organizational transformation and operating models?",
-    "Tell me about Grady's work on Amazon Echo - what was his role?",
+    "Tell me about Grady's cross-functional collaboration and leadership.",
   ],
 };
 

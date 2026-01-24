@@ -41,13 +41,13 @@ export const gradyProfile = {
       ],
       aiContext: [{
         situation:
-          "Indeed needed architectural clarity and clear accountability for architectural decisions",
+          "Indeed lacked clear architectural boundaries and accountability; needed foundational domain structure across 500+ teams",
         approach:
-          "Established and socialized clear Domain-Driven Design structure, technical governance, and operating mechanisms",
+          "Assembled small team of Indeed's most knowledgeable engineers to define initial domain boundaries representing fundamental business concepts (jobs, job seekers, employers, candidates, messages, matching, etc.). Identified first 15 domains and assigned named technical ICs as accountable domain leaders. Socialized first with Engineering VPs, then critically with Product Management VPs who would share influence with domain leaders. Documented accountability model and rolled out org-wide.",
         technicalWork:
-          "Architectural reviews, cross-functional governance, reliability engineering, technical debt prioritization",
+          "Domain boundary definition, accountability model design, cross-functional governance documentation, stakeholder alignment across Engineering and Product leadership",
         lessonsLearned:
-          "Scaling influence requires both technical credibility and organizational design skills. Accountability for architectural decisions is critical for technical leadership; Domain-Driven Design is a powerful tool for achieving this. Abstractions are difficult to manage without clean technical boundaries and great documentation.",
+          "Product leaders were generally supportive - they had often lacked a single, accountable engineering counterpart for system design. Those resistant cared about unilateral decision-making authority; gaining consensus with them required more formal authority. Clear accountability structures benefit those who want collaboration, and constrain those who prefer autonomy.",
       },
       {
         situation:
@@ -58,6 +58,26 @@ export const gradyProfile = {
           "Technical debt prioritization, technical debt review process, technical debt reporting, product roadmap sizing",
         lessonsLearned:
           "Technical debt prioritization is a complex problem that requires a clear and consistent approach. The framework and process should be simple to understand and follow, and the reporting should be clear and actionable. Product roadmap sizing is a complex problem that requires a clear and consistent approach. The framework and process should be simple to understand and follow, and the reporting should be clear and actionable.",
+      },
+      {
+        situation:
+          "Indeed R&D organization needed structured approach to AI coding tool adoption",
+        approach:
+          "Defined behaviors, tools, and measurements for AI usage across R&D organization; focused specifically on AI coding tools rather than AI in products",
+        technicalWork:
+          "AI coding tool evaluation, usage behavior frameworks, measurement systems",
+        lessonsLearned:
+          "AI tool adoption cannot be forced. Software engineers value freedom to make decisions and seeing their products work in production. Encouraging rather than requiring tool usage led to greater adoption.",
+      },
+      {
+        situation:
+          "Mentored senior staff across Engineering, Product Management, Program Management, and Data Science - needed scalable approach that didn't require domain expertise in each area",
+        approach:
+          "Position as coach, not all-knowing expert. Mentee owns identifying topics, areas of growth, and what kind of mentorship they want. Iterate with mentee to tie their interests to company needs and industry direction. Follow GROW coaching model: Goal, Reality, Opportunities, 'Will Do'. Regular check-ins build accountability; cycle continues goal to goal.",
+        technicalWork:
+          "Mentored through role changes and promotion cycles. Notable example: 9-month mentorship of senior data scientist who wanted both promotion to principal AND role change to software engineering - accomplished both by identifying specific goals for each track and diligently working toward them.",
+        lessonsLearned:
+          "Effective mentorship doesn't require being an expert in the mentee's domain - it requires helping them build expertise themselves. Mentee ownership of the agenda creates accountability and ensures relevance.",
       }
     ],
     }, 
@@ -113,6 +133,16 @@ export const gradyProfile = {
           "Candidate ingest/search, workflow automation, data pipelines, analytics/reporting",
         lessonsLearned:
           "10X growth requires both technical platform and organizational foundation",
+      },
+      {
+        situation:
+          "Indeed's CEO declared an annual goal of 8MM interviews on Indeed's interview platform, but no team or individual was made accountable. Eventually 5 different teams claimed to have developed an interview platform.",
+        approach:
+          "Worked with executive stakeholders to align on the need for a single, canonical platform and data model for 'interview'. Then worked directly with the competing teams to determine who would develop and maintain the consolidated platform.",
+        technicalWork:
+          "Platform consolidation, canonical data model definition, cross-team architectural alignment",
+        lessonsLearned:
+          "Platform consolidation requires both executive alignment/mandate AND clear opportunities for displaced teams. Convincing teams to cede scope worked by showing that smaller focus enables greater impact - easier to be impactful with focused scope than trying to boil the ocean.",
       }],
     },
     {
@@ -179,6 +209,16 @@ export const gradyProfile = {
           "Multi-platform apps, voice UI, ecosystem services, multi-modal shopping",
         lessonsLearned:
           "0-to-1 products require balancing vision with execution constraints",
+      },
+      {
+        situation:
+          "Amazon Echo needed to integrate with Amazon's existing retail ecosystem while maintaining customer trust and safety mechanisms",
+        approach:
+          "Prioritized listening over persuading when integrating with core retail teams. Understood that existing teams had built safety mechanisms and customer trust that could not be violated when exposed through Echo.",
+        technicalWork:
+          "Ecosystem service integration ensuring retail safety mechanisms and customer trust were preserved across voice UI, shopping, and accessibility features",
+        lessonsLearned:
+          "Integrating a new product into an established company ecosystem requires more listening than persuading. Existing teams have built trust and safety mechanisms that must be respected, not overridden.",
       }],
     },
     {
@@ -186,6 +226,7 @@ export const gradyProfile = {
       role: "Director of Product Development",
       period: "June 2011 – August 2012",
       highlights: [
+        "Third employee and first technical hire",
         "Technology owner for venture-backed M2M (machine-to-machine) startup",
         "Customer- and partner-facing technology advisor for Fortune 250 partner",
         "Managed transition from outsource/partner model to in-house, increasing ARPU and reducing costs",

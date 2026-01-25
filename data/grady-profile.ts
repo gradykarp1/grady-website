@@ -164,6 +164,16 @@ export const gradyProfile = {
           "Console, CLI, SDK spanning entire AWS service offering; security and compliance policies",
         lessonsLearned:
           "Tier-1 services require operational excellence and executive alignment",
+      },
+      {
+        situation:
+          "Led a tier-1 platform service that other AWS services and customers depended on for availability",
+        approach:
+          "Constantly prioritize user experience and availability over team productivity. Even when addressing underlying technical and procedural issues, production user experience and availability must remain the priority.",
+        technicalWork:
+          "Operational excellence for tier-1 services, incident management, dependency management",
+        lessonsLearned:
+          "Never blame your system's lack of availability on your dependencies. It was your choice to take a dependency on an external system, so you need to live with that choice. Tier-1 operations require accepting full accountability for user experience.",
       }],
     },
     {
@@ -303,7 +313,16 @@ export const gradyProfile = {
   },
 
   education: [
-    { school: "Stanford University", degree: "B.S. Cognitive Science, minor in Mathematics" },
+    {
+      school: "Stanford University",
+      degree: "B.S. Cognitive Science, minor in Mathematics",
+      aiContext: {
+        situation: "Studied cognitive science with focus on emergent properties of complex systems",
+        approach: "Apply understanding that very complex systems - whether silicon or carbon-based - exhibit emergent properties that can be reasoned about and influenced through subtle or major changes. Results of influence are not deterministic, but through experience and experimentation we become more expert at this influence.",
+        technicalWork: "Application of complex systems thinking to both technical architecture and organizational design",
+        lessonsLearned: "Complex systems - technical or human - share fundamental properties. Understanding emergence helps predict how interventions will propagate, even when outcomes aren't fully deterministic.",
+      },
+    },
     { school: "INSEAD", degree: "MBA, International Product Development" },
   ],
 

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { gradyProfile } from "@/data/grady-profile";
 
-const DISPLAY_DURATION_MS = 7000; // 7 seconds per quotation
+const DISPLAY_DURATION_MS = 8000; // 8 seconds per quotation
 const FADE_DURATION_MS = 500;
 
 export default function QuotationCarousel() {

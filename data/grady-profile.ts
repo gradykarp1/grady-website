@@ -11,20 +11,53 @@ export const gradyProfile = {
       role: "gradykarp.com",
       period: "2026 – present",
       highlights: [
-        "Personal website with AI-powered feature that lets people ask questions about my experience and skills",
-        "LangGraph & Claude SDK project that does research and generates reports about the state of the US power grid",
-        "Family coordinator that intelligently manages family events, resources, and handles calendar conflicts",
+        "Built three production applications solo in under 4 weeks using AI-native development (Claude Code)",
+        "gradykarp.com: AI-powered portfolio where visitors can ask Claude questions about my experience - Claude has full context of my career, skills, and testimonials to provide thoughtful, honest assessments",
+        "US Power Grid Research System: Multi-agent AI system using LangGraph + Claude SDK - three specialized agents (Research, Analysis, Writer) collaborate to produce comprehensive professional reports",
+        "Family Tasks: Full-stack application (FastAPI + Next.js) for family task management via SMS, Slack, and web - Claude routes natural language messages to appropriate actions with confidence scoring",
       ],
-      aiContext: [{
-        situation:
-          "Wanted to showcase technical skills and create useful tools for personal and family use",
-        approach:
-          "Built practical AI-powered applications using modern frameworks and LLM APIs",
-        technicalWork:
-          "Next.js, TypeScript, LangGraph, Claude SDK, AI chat interfaces, automated research pipelines",
-        lessonsLearned:
-          "Hands-on AI development reinforces that practical applications require thoughtful prompt engineering and system design",
-      }],
+      aiContext: [
+        {
+          situation:
+            "Wanted to demonstrate AI-native development capabilities through practical, production-ready applications built rapidly as a solo developer",
+          approach:
+            "Embraced AI as a true accelerator - used Claude Code (Opus/Sonnet) for architecture design, code generation, debugging, and iteration. Each project went from concept to deployed production app in days, not weeks. Focused on shipping real value quickly rather than over-engineering.",
+          technicalWork:
+            "Full-stack development: Next.js 15/React 19, FastAPI, TypeScript, Python, PostgreSQL. AI integration: Claude SDK, LangGraph multi-agent orchestration, Vercel AI SDK streaming, prompt engineering. Infrastructure: Vercel deployment, Twilio SMS/MMS, Slack Events API, Vercel Blob storage.",
+          lessonsLearned:
+            "AI-native development is transformative when you trust the AI as a collaborator rather than just a code generator. The key is rapid iteration - ship something, see what breaks, fix it fast. A solo developer with AI assistance can build what used to require a small team.",
+        },
+        {
+          situation:
+            "gradykarp.com: Needed a portfolio that goes beyond static content - wanted visitors (especially potential employers) to get genuine, thoughtful answers about my fit for roles",
+          approach:
+            "Built an 'Ask AI' feature where Claude has complete context about my experience, skills, testimonials, and gaps. The AI is instructed to be honest about both strengths and limitations, providing genuine assessments rather than marketing fluff.",
+          technicalWork:
+            "Next.js App Router with streaming chat UI. System prompt builder that structures career data into context. Claude Sonnet integration via Vercel AI SDK. Chat logging to Vercel Blob for continuous improvement. Testimonial carousel pulling from structured profile data.",
+          lessonsLearned:
+            "Transparency builds trust. By acknowledging gaps and providing honest assessments, the AI creates more credibility than a traditional resume ever could. The system prompt design is critical - structure matters for LLM context.",
+        },
+        {
+          situation:
+            "US Power Grid: Wanted to explore multi-agent AI systems and produce genuinely useful research output - chose an important, data-rich topic",
+          approach:
+            "Designed a LangGraph workflow with three specialized Claude agents: Research Agent (gathers data from authoritative sources like EIA, NERC), Analysis Agent (computes metrics, trends, vulnerability scores), and Writer Agent (synthesizes into professional report). Human-in-the-loop checkpoints for quality control.",
+          technicalWork:
+            "LangGraph state machine orchestration with conditional routing. Claude Agent SDK for tool-equipped agents (WebFetch, WebSearch, Read, Write). Typed state schema with Pydantic. 7-day disk cache with retry logic. Produces 15-25 page professional reports with data tables and citations.",
+          lessonsLearned:
+            "Multi-agent systems require clear boundaries and well-defined handoffs. Each agent should have a focused purpose. The orchestration layer (LangGraph) is as important as the individual agents. Human checkpoints catch issues before they compound.",
+        },
+        {
+          situation:
+            "Family Tasks: Real families have chaotic communication - texts, Slack messages, random voice notes. Wanted a system that could unify all these inputs into actionable task management",
+          approach:
+            "Built a multi-channel ingestion system (SMS via Twilio, Slack Events API, web UI) that routes all inputs to Claude for intent classification and entity extraction. Confidence scoring ensures uncertain items go to a review queue rather than taking wrong actions.",
+          technicalWork:
+            "Backend: FastAPI with async processing, SQLAlchemy ORM, PostgreSQL. AI pipeline: Claude Sonnet for message routing (8 intent types), OpenAI Whisper for voice transcription, Claude Vision for image text extraction. Frontend: Next.js 16, React 19, Tailwind CSS. Multi-modal: handles text, images, and voice notes.",
+          lessonsLearned:
+            "Real-world AI applications need graceful degradation. Confidence thresholds and review queues prevent the AI from making costly mistakes. Cross-channel context (knowing what was said on SMS when responding on Slack) creates a unified experience.",
+        },
+      ],
     },
     {
       company: "Indeed",
@@ -292,21 +325,23 @@ export const gradyProfile = {
       "Authentic relationships and trust building",
       "Translating business goals into engineering strategy and execution",
       "Broad stakeholder consensus building",
-      "Creating alignment between engineering best practices and on-the-ground activities"
+      "Creating alignment between engineering best practices and on-the-ground activities",
+      "AI-native development (Claude Code, Cursor) - actively shipping production apps",
+      "Rapid prototyping and iteration with AI assistance",
     ],
     moderate: [
-      "Hands-on coding (Node.js, Python, Java, JavaScript)",
+      "Hands-on full-stack coding (TypeScript, Python, Node.js, React, FastAPI)",
       "Cost transformation & unit economics",
       "Product management",
       "API design and service boundaries",
       "Developer velocity and SDLC optimization",
-      "Claude code and AI agent development",
+      "AI agent development (Claude SDK, LangGraph, multi-agent orchestration)",
+      "Prompt engineering and LLM system design",
       "Roadmap work breakdown structures",
       "Tracking long-run, quantitative metrics for broad goals"
     ],
     gaps: [
-      "Recent, focused hands-on IC work (leadership-focused for 10+ years)",
-      "Deep ML/AI implementation (strategic perspective, not hands-on practitioner)",
+      "Deep ML/AI research (practical AI application, not ML research)",
       "Startup founder experience (advisor/employee, not founder)",
       "Deep infrastructural knowledge (e.g., K8s, Terraform, networking, etc.) -- passing knowledge at best."
     ],
@@ -434,6 +469,7 @@ export const gradyProfile = {
   ],
 
   suggestedQuestions: [
+    "Would Grady be a good fit for a fast-moving startup team that values AI-native development and autonomy?",
     "Would Grady be a good fit for a fractional CTO role at a Series B startup?",
     "How does Grady approach organizational management and mentorship?",
     "What's Grady's experience with organizational transformation and operating models?",

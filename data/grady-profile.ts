@@ -23,7 +23,7 @@ export const gradyProfile = {
           approach:
             "Built a conversational agent that uses OpenAI's APIs to have natural conversations with me in Italian. The agent adjusts its responses to my level of proficiency and provides feedback on my pronunciation and grammar. Memory about conversations and proficiency is stored.",
           technicalWork:
-            "Started with a CLI that allows for microphone access and streaming audio to OpenAI's APIs. Conversations are transcribed for the user, and are sent to OpenAI as system prompts. Used Claude to plan and implement, while I provided architectural guidance and both functional and non-functional requirements."  
+            "Started with a CLI that allows for microphone access and streaming audio to OpenAI's APIs. Conversations are transcribed for the user, and are sent to OpenAI as system prompts. Used Claude to plan and implement, while I provided architectural guidance and both functional and non-functional requirements.",
           lessonsLearned:
             "AI-native development is transformative when you trust the AI as a collaborator rather than just a code generator. The key is rapid iteration - ship something, see what breaks, fix it fast. A solo developer with AI assistance can build what used to require a small team. Prompt engineering is critical for getting the best results from the AI.",
         },

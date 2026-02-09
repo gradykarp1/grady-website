@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | Grady Karp",
@@ -76,6 +77,15 @@ export default function AboutPage() {
             foundation of clear communication, continuous improvement, and a
             commitment to excellence.
           </p>
+          <div className="mt-10">
+            <Image
+              src="/grady-profile.png"
+              alt="Grady Karp"
+              width={400}
+              height={400}
+              className="rounded-lg grayscale"
+            />
+          </div>
         </section>
       </div>
     </div>

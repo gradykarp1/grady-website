@@ -18,14 +18,14 @@ export const gradyProfile = {
       ],
       aiContext: [
         {
-          situation:
-            "Wanted to demonstrate AI-native development capabilities through practical, production-ready applications built rapidly as a solo developer",
+          situation: 
+            "Italian conversational agent: Want to learn to speak Italian well enough to pass the Italian citizenship exam",
           approach:
-            "Embraced AI as a true accelerator - used Claude Code (Opus/Sonnet) for architecture design, code generation, debugging, and iteration. Each project went from concept to deployed production app in days, not weeks. Focused on shipping real value quickly rather than over-engineering.",
+            "Built a conversational agent that uses OpenAI's APIs to have natural conversations with me in Italian. The agent adjusts its responses to my level of proficiency and provides feedback on my pronunciation and grammar. Memory about conversations and proficiency is stored.",
           technicalWork:
-            "Full-stack development: Next.js 15/React 19, FastAPI, TypeScript, Python, PostgreSQL. AI integration: Claude SDK, LangGraph multi-agent orchestration, Vercel AI SDK streaming, prompt engineering. Infrastructure: Vercel deployment, Twilio SMS/MMS, Slack Events API, Vercel Blob storage.",
+            "Started with a CLI that allows for microphone access and streaming audio to OpenAI's APIs. Conversations are transcribed for the user, and are sent to OpenAI as system prompts. Used Claude to plan and implement, while I provided architectural guidance and both functional and non-functional requirements."  
           lessonsLearned:
-            "AI-native development is transformative when you trust the AI as a collaborator rather than just a code generator. The key is rapid iteration - ship something, see what breaks, fix it fast. A solo developer with AI assistance can build what used to require a small team.",
+            "AI-native development is transformative when you trust the AI as a collaborator rather than just a code generator. The key is rapid iteration - ship something, see what breaks, fix it fast. A solo developer with AI assistance can build what used to require a small team. Prompt engineering is critical for getting the best results from the AI.",
         },
         {
           situation:

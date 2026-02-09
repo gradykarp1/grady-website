@@ -54,29 +54,31 @@ export default function AboutPage() {
         <h1 className="mb-8 text-4xl font-bold text-neutral-900">About Me</h1>
 
         {/* Bio Section */}
-        <section className="mb-16">
-          <p className="mb-6 text-lg leading-relaxed text-neutral-600">
-            I&apos;m an executive-level technical and business leader with a
-            track record of success in engineering leadership and operational
-            excellence. Based in Seattle, Washington, I specialize in helping
-            organizations build high-performing engineering teams and achieve
-            technical excellence.
-          </p>
-          <p className="mb-6 text-lg leading-relaxed text-neutral-600">
-            My expertise spans strategic engineering leadership, technical
-            systems architecture, and operational excellence. I&apos;m passionate
-            about unifying cross-functional teams, establishing quality
-            governance structures, and mentoring engineers across organizational
-            domains.
-          </p>
-          <p className="text-lg leading-relaxed text-neutral-600">
-            Throughout my career, I&apos;ve focused on setting R&D objectives,
-            improving system reliability, and developing people and teams. I
-            believe that great engineering organizations are built on a
-            foundation of clear communication, continuous improvement, and a
-            commitment to excellence.
-          </p>
-          <div className="mt-10">
+        <section className="mb-16 flex flex-col md:flex-row md:items-end md:gap-10">
+          <div className="flex-1">
+            <p className="mb-6 text-lg leading-relaxed text-neutral-600">
+              I&apos;m an executive-level technical and business leader with a
+              track record of success in engineering leadership and operational
+              excellence. Based in Seattle, Washington, I specialize in helping
+              organizations build high-performing engineering teams and achieve
+              technical excellence.
+            </p>
+            <p className="mb-6 text-lg leading-relaxed text-neutral-600">
+              My expertise spans strategic engineering leadership, technical
+              systems architecture, and operational excellence. I&apos;m passionate
+              about unifying cross-functional teams, establishing quality
+              governance structures, and mentoring engineers across organizational
+              domains.
+            </p>
+            <p className="text-lg leading-relaxed text-neutral-600 md:mb-0">
+              Throughout my career, I&apos;ve focused on setting R&D objectives,
+              improving system reliability, and developing people and teams. I
+              believe that great engineering organizations are built on a
+              foundation of clear communication, continuous improvement, and a
+              commitment to excellence.
+            </p>
+          </div>
+          <div className="mt-10 md:mt-0 md:flex-shrink-0">
             <img
               src="/grady-profile.png"
               alt="Grady Karp"

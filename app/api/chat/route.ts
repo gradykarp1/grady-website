@@ -38,11 +38,16 @@ export async function POST(req: Request) {
     );
 
     const result = streamText({
-      model: anthropic("claude-sonnet-4-20250514"),
+      model: anthropic("claude-sonnet-5-5"),
       system: systemPrompt,
       messages: modelMessages,
-      maxOutputTokens: 1024,
-      temperature: 0.7,
+      // Thinking is on by default for this model and its tokens count toward
+      // this cap, so leave headroom beyond the ~300-word answers we want.
+      maxOutputTokens: 4096,
+      // Sampling params (temperature/top_p/top_k) are rejected by this model.
+      providerOptions: {
+        anthropic: { effort: "low" },
+      },
       onFinish: async ({ text }) => {
         // Log the complete conversation including the assistant's response
         const fullConversation: ChatMessage[] = [

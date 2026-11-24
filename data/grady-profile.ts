@@ -98,12 +98,13 @@ export const gradyProfile = {
         {
           title: "China export initiative",
           situation:
-            "Shopify's China export initiative represented a multi-billion-dollar opportunity for merchants, with infrastructure support as a critical dependency",
+            "Shopify's China export initiative lets Chinese merchants export to the US using Shopify as their platform - a multi-billion-dollar opportunity for merchants. The CTO identified that CDN egress costs for the proposed solution were 10x what CDN would cost in other parts of the world. The CTO and business leadership (VP of Growth, head of partnerships) were at odds, and without agreement the initiative would have stalled.",
           approach:
-            "Aligned the CTO and business leadership on how infrastructure would support the initiative",
+            "Stepped in once the CTO's feedback was clear, taking responsibility for bringing the business along to the CTO's perspective on infrastructure - making sure they understood the feedback and the problems with the proposed solution. Over about three months: several in-depth conversations, a technical write-up on the underlying problem, and extensive behind-the-scenes alignment work.",
           technicalWork:
-            "Executive alignment between technology and business leadership on infrastructure strategy",
-          lessonsLearned: "",
+            "The breakthrough was convincing the business to unbundle the CDN from the other edge-based technologies in the proposal, which let everyone move forward at a security and price point the CTO accepted. The result unblocked the initiative.",
+          lessonsLearned:
+            "Leadership requires understanding multiple functions - their agendas and measures of success - and bridging across them to reach a win-win.",
         },
         {
           title: "Frontier AI lab agreement",

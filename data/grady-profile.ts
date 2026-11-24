@@ -77,12 +77,13 @@ export const gradyProfile = {
         {
           title: "Office of the CTO accountability system and AI pipeline",
           situation:
-            "As Chief of Staff to the CTO, needed to ensure CTO guidance across 9 verticals (~3,000 engineers) actually turned into action",
+            "CTO guidance came in many forms - verbally in meetings, in Slack or email replies to questions and updates - and was stated but not reliably followed up on. Follow-through depended on the CTO's memory, which didn't scale, and gaps regularly opened between the guidance and what teams actually built.",
           approach:
-            "Built an accountability system in which every piece of CTO guidance was tracked until it was implemented, or explicitly declined with a stated reason",
+            "Noticed the pattern and, on his own initiative, built a lightweight accountability system: requests and commitments tracked in a structured data store with a simple front end, regular update requests via Slack integrations, and open CTO feedback items reviewed in regular leadership meetings. Every piece of guidance was tracked until it was implemented, or explicitly declined with a stated reason.",
           technicalWork:
-            "Designed and built, hands-on, the AI pipeline behind the system: it synthesizes notes, meeting transcripts, and email/Slack signals into tracked commitments",
-          lessonsLearned: "",
+            "Built the AI pipeline personally. An hourly cron job ingests new CTO content from email, Slack, and meeting transcripts. Jev - TypeSafe AI's 'System One' decision model, which returns calibrated probabilities rather than generated text - classifies whether content is actual guidance. An LLM (configurable through a model router) determines whether it is net-new and which teams own it, and MCP lets agents create and update action items in the data store. Grady reviewed new action items roughly daily as final arbiter. Example: the CTO asked that PyTorch jobs regularly check fleet GPU capacity and, if capacity fell below their configuration, pause and reconfigure for what was actually available. A team instead built the reverse - a central mechanism for pushing updates to PyTorch jobs. Because the system had already ingested the CTO's guidance, it caught the design flaw in the team's implementation notes before the work went further, and the team pivoted to the correct design.",
+          lessonsLearned:
+            "Over six months, about 80 feedback items spanning architecture, process, and organizational design were tracked and resolved. Churn and relitigation of technical questions dropped significantly, and meetings became much less contentious. Fast classification models like Jev combined with LLMs can automate much of the basic judgment about how to categorize open items and drive them to resolution, with a human as final arbiter.",
         },
         {
           title: "Office of the CTO operating rhythm",

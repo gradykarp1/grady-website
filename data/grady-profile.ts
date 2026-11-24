@@ -109,12 +109,13 @@ export const gradyProfile = {
         {
           title: "Frontier AI lab agreement",
           situation:
-            "Shopify depends on LLM access and faced regulatory and geopolitical risk to its continuity",
+            "Shopify's contract with a frontier AI lab (the lab is not named publicly) was due to expire, amid regulatory and geopolitical risk to continued LLM access. Shopify needed guaranteed access to the lab's models, and guaranteed Shopify ownership of the data those models generated.",
           approach:
-            "Negotiated Shopify's agreement with a frontier AI lab to guarantee continuous LLM access",
+            "Asked by the head of Engineering to lead the renewal, working with Legal and procurement. Analyzed the value Shopify actually got from the prior contract versus the lab's view of its value, and used that analysis to align Shopify leadership internally.",
           technicalWork:
-            "Vendor negotiation, AI supply risk management",
-          lessonsLearned: "",
+            "Negotiated an agreement guaranteeing access to the lab's models and Shopify's ownership of the data they generate. Defining the contract terms was the hardest part, because LLM licenses are a new concept in the industry. The process took four weeks, and the analysis-driven negotiation cut the lab's original asking price by more than 75%.",
+          lessonsLearned:
+            "The agreement protected Shopify's training and output data and let Shopify fine-tune other models with it - existentially important, since Shopify's strategic moat is its data. Learned how labs build and fine-tune LLMs, and how to use bargaining power appropriately to reach a mutually beneficial agreement.",
         },
       ],
     },

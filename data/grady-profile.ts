@@ -109,7 +109,7 @@ export const gradyProfile = {
         {
           title: "Frontier AI lab agreement",
           situation:
-            "Shopify's contract with a frontier AI lab (the lab is not named publicly) was due to expire, amid regulatory and geopolitical risk to continued LLM access. Shopify needed guaranteed access to the lab's models, and guaranteed Shopify ownership of the data those models generated.",
+            "Shopify's contract with a frontier AI lab (the lab is not named publicly) was due to expire, amid regulatory and geopolitical risk to continued LLM access: North American governments might restrict the use of open-source LLMs developed in China, which Shopify relies on to benchmark other models' performance. The exposure was theoretical, but US government action on AI and China had been unpredictable. The agreement guaranteed Shopify access to models developed in North America, so such a restriction wouldn't cut Shopify off. Shopify needed guaranteed access to the lab's models, and guaranteed Shopify ownership of the data those models generated.",
           approach:
             "Asked by the head of Engineering to lead the renewal, working with Legal and procurement. Analyzed the value Shopify actually got from the prior contract versus the lab's view of its value, and used that analysis to align Shopify leadership internally.",
           technicalWork:

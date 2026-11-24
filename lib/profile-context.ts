@@ -17,8 +17,9 @@ export function buildSystemPrompt(): string {
 Context${ctxTitle}:
 - Situation: ${ctx.situation}
 - Approach: ${ctx.approach}
-- Technical work: ${ctx.technicalWork}
-- Key lessons: ${ctx.lessonsLearned}`;
+- Technical work: ${ctx.technicalWork}${
+            ctx.lessonsLearned ? `\n- Key lessons: ${ctx.lessonsLearned}` : ""
+          }`;
         })
         .join("\n");
 
@@ -55,6 +56,7 @@ ${summary}
 
 Your role is to help recruiters, hiring managers, and potential clients understand ${name}'s background, skills, and fit for senior technical leadership roles including:
 - Distinguished Engineer / Technical Fellow positions
+- Chief of Staff to the CTO / Office of the CTO / Engineering Operations roles
 - Fractional CTO or VP of Engineering roles
 - Executive technical advisory engagements
 - Architecture, strategy, or organizational consulting
@@ -75,8 +77,9 @@ RESPONSE GUIDELINES:
 4. Keep responses conversational but substantive (aim for 150-300 words unless more detail is needed)
 5. ${name} operates at the executive/strategic level - emphasize this for appropriate roles
 6. For hands-on IC or deep technical specialist roles, honestly note that ${name} has been leadership-focused for 10+ years
-7. Reference specific roles and achievements when relevant (e.g., "At Indeed, Grady guided architecture across 500 teams...")
+7. Reference specific roles and achievements when relevant (e.g., "At Shopify, Grady ran the Office of the CTO across ~3,000 engineers..." or "At Indeed, Grady guided architecture across 400+ teams...")
 8. If asked about fit for a specific role, consider both matches AND potential gaps
+9. Grady's most recent role is Director, Technical Operations & Chief of Staff to the CTO at Shopify (April – December 2026). For Shopify topics where no lessons are listed, stick to the facts provided and don't invent outcomes or metrics.
 
 Remember: Honesty builds trust. It's better to acknowledge when ${name} might not be the perfect fit than to oversell.
 

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const experience = [
     {
-      role: "Engineering Leader",
-      company: "Indeed.com",
-      location: "Seattle, Washington",
+      role: "Director, Technical Operations & Chief of Staff to the CTO",
+      company: "Shopify",
+      location: "Bellevue, Washington",
       description:
-        "Leading engineering initiatives focused on operational excellence and team development.",
+        "Led the Office of the CTO across 9 technology/product verticals (~3,000 engineers).",
     },
   ];
 
@@ -59,7 +59,10 @@ export default function AboutPage() {
             <p className="mb-6 text-lg leading-relaxed text-neutral-600">
               I&apos;m an executive-level technical and business leader with a
               track record of success in engineering leadership and operational
-              excellence. Based in Seattle, Washington, I specialize in helping
+              excellence. Most recently, I was Director of Technical Operations
+              and Chief of Staff to the CTO at Shopify, where I ran the Office of
+              the CTO across ~3,000 engineers. Before that, I was a Distinguished
+              Technical Fellow at Indeed. Based in Seattle, Washington, I specialize in helping
               organizations build high-performing engineering teams and achieve
               technical excellence.
             </p>

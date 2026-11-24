@@ -1,20 +1,21 @@
 export const gradyProfile = {
   name: "Grady Karp",
-  title: "Distinguished Technical Fellow | Technical Chief of Staff",
+  title: "Engineering Executive | Office of the CTO (Shopify, Indeed) | Distinguished Technical Fellow",
   location: "Seattle, WA",
   status: "Open to executive advisory, fractional CTO, and consulting engagements",
 
-  summary: `Strategic technology and business leader operating at the intersection of architecture, organizational design, and product strategy. Expert in defining and executing multi-year engineering strategies, establishing architectural governance, and shaping high-scale R&D operating models.`,
+  summary: `Engineering executive who scales organizations and the systems they run. Most recently Director of Technical Operations and Chief of Staff to the CTO at Shopify, where he ran the Office of the CTO across ~3,000 engineers and built its accountability system on an AI pipeline he designed himself. Previously Distinguished Technical Fellow and Technical Chief of Staff at Indeed, setting architecture, reliability, and AI-adoption direction for 2,000+ R&D staff. Operates at the intersection of architecture, organizational design, and product strategy.`,
 
   experience: [
     {company: "Personal projects",
       role: "gradykarp.com",
       period: "2026 – present",
       highlights: [
-        "Built three production applications solo in under 4 weeks using AI-native development (Claude Code)",
+        "Built four applications solo in 2 months using AI-native development (Claude Code)",
         "gradykarp.com: AI-powered portfolio where visitors can ask Claude questions about my experience - Claude has full context of my career, skills, and testimonials to provide thoughtful, honest assessments",
         "US Power Grid Research System: Multi-agent AI system using LangGraph + Claude SDK - three specialized agents (Research, Analysis, Writer) collaborate to produce comprehensive professional reports",
         "Family Tasks: Full-stack application (FastAPI + Next.js) for family task management via SMS, Slack, and web - Claude routes natural language messages to appropriate actions with confidence scoring",
+        "Italian Conversational Agent: Conversational agent that uses OpenAI's APIs to have natural conversations with me in Italian. The agent adjusts its responses to my level of proficiency and provides feedback on my pronunciation and grammar. Memory about conversations and proficiency is stored.",
       ],
       aiContext: [
         {
@@ -60,12 +61,68 @@ export const gradyProfile = {
       ],
     },
     {
+      company: "Shopify",
+      role: "Director, Technical Operations & Chief of Staff to the CTO",
+      period: "April 2026 – December 2026",
+      highlights: [
+        "Leader for Shopify's Office of the CTO across 9 technology/product verticals, comprising ~3,000 engineers",
+        "Owned the rhythm of the business for the Office of the CTO, including reviews, demos, offsites, organizational design, and execution",
+        "Built the accountability system for the Office of the CTO: every piece of CTO guidance was tracked until it was implemented, or explicitly declined with a stated reason",
+        "Designed and built the AI pipeline behind the accountability system, synthesizing notes, meeting transcripts, and email/Slack signals into tracked commitments",
+        "Developed cross-organizational and cross-functional interlocks between Engineering/Data and Sales/Support functions",
+        "Aligned the CTO and business leadership on how infrastructure would support Shopify's China export initiative - a critical dependency in unlocking a multi-billion-dollar opportunity for Shopify merchants",
+        "Negotiated Shopify's agreement with a frontier AI lab to guarantee continuous LLM access in the face of regulatory and geopolitical risk",
+      ],
+      aiContext: [
+        {
+          title: "Office of the CTO accountability system and AI pipeline",
+          situation:
+            "As Chief of Staff to the CTO, needed to ensure CTO guidance across 9 verticals (~3,000 engineers) actually turned into action",
+          approach:
+            "Built an accountability system in which every piece of CTO guidance was tracked until it was implemented, or explicitly declined with a stated reason",
+          technicalWork:
+            "Designed and built, hands-on, the AI pipeline behind the system: it synthesizes notes, meeting transcripts, and email/Slack signals into tracked commitments",
+          lessonsLearned: "",
+        },
+        {
+          title: "Office of the CTO operating rhythm",
+          situation:
+            "The Office of the CTO spans 9 technology/product verticals and needed a consistent operating cadence and connections to the rest of the business",
+          approach:
+            "Owned the rhythm of the business - reviews, demos, offsites, organizational design, and execution - and developed interlocks between Engineering/Data and Sales/Support functions",
+          technicalWork:
+            "Operating cadence design, organizational design, cross-functional interlocks",
+          lessonsLearned: "",
+        },
+        {
+          title: "China export initiative",
+          situation:
+            "Shopify's China export initiative represented a multi-billion-dollar opportunity for merchants, with infrastructure support as a critical dependency",
+          approach:
+            "Aligned the CTO and business leadership on how infrastructure would support the initiative",
+          technicalWork:
+            "Executive alignment between technology and business leadership on infrastructure strategy",
+          lessonsLearned: "",
+        },
+        {
+          title: "Frontier AI lab agreement",
+          situation:
+            "Shopify depends on LLM access and faced regulatory and geopolitical risk to its continuity",
+          approach:
+            "Negotiated Shopify's agreement with a frontier AI lab to guarantee continuous LLM access",
+          technicalWork:
+            "Vendor negotiation, AI supply risk management",
+          lessonsLearned: "",
+        },
+      ],
+    },
+    {
       company: "Indeed",
       role: "Distinguished Technical Fellow, Technical Chief of Staff",
       period: "July 2023 – December 2025",
       highlights: [
         "Executive technical leader supporting GVP of Engineering and Engineering leadership",
-        "Guided architecture across 500 teams",
+        "Guided architecture across 400+ teams",
         "Removed technical and architectural blockers for architects and principal engineers",
         "Created Domain-Driven Design structure and culture org-wide",
         "Drove company-wide reliability improvements (SLO culture)",
@@ -74,7 +131,7 @@ export const gradyProfile = {
       ],
       aiContext: [{
         situation:
-          "Indeed lacked clear architectural boundaries and accountability; needed foundational domain structure across 500+ teams",
+          "Indeed lacked clear architectural boundaries and accountability; needed foundational domain structure across 400+ teams",
         approach:
           "Assembled small team of Indeed's most knowledgeable engineers to define initial domain boundaries representing fundamental business concepts (jobs, job seekers, employers, candidates, messages, matching, etc.). Identified first 15 domains and assigned named technical ICs as accountable domain leaders. Socialized first with Engineering VPs, then critically with Product Management VPs who would share influence with domain leaders. Documented accountability model and rolled out org-wide.",
         technicalWork:
@@ -153,7 +210,7 @@ export const gradyProfile = {
       highlights: [
         "Led final mile of employer customer journey products and platforms",
         "Delivered 10X growth of key business metrics",
-        "Grew Seattle SMB engineering from 23 to 85 staff in 3 years",
+        "Grew Seattle SMB engineering from 23 to 76 staff in 3 years",
         "Reorganized SMB into domain-centric teams",
         "Ideated and built Indeed's Candidate Platform",
         "Cross-company champion for operational excellence",
@@ -324,6 +381,7 @@ export const gradyProfile = {
       "Reliability engineering and culture of operational excellence",
       "Authentic relationships and trust building",
       "Translating business goals into engineering strategy and execution",
+      "Running an Office of the CTO: operating rhythm, reviews, offsites, and accountability for executive guidance",
       "Broad stakeholder consensus building",
       "Creating alignment between engineering best practices and on-the-ground activities",
       "AI-native development (Claude Code, Cursor) - actively shipping production apps",
@@ -337,6 +395,8 @@ export const gradyProfile = {
       "Developer velocity and SDLC optimization",
       "AI agent development (Claude SDK, LangGraph, multi-agent orchestration)",
       "Prompt engineering and LLM system design",
+      "LLM pipelines for executive operations (built the Shopify Office of the CTO pipeline)",
+      "Vendor negotiation and AI supply risk management",
       "Roadmap work breakdown structures",
       "Tracking long-run, quantitative metrics for broad goals"
     ],
@@ -469,6 +529,7 @@ export const gradyProfile = {
   ],
 
   suggestedQuestions: [
+    "What did Grady do as Chief of Staff to the CTO at Shopify?",
     "Would Grady be a good fit for a fast-moving startup team that values AI-native development and autonomy?",
     "Would Grady be a good fit for a fractional CTO role at a Series B startup?",
     "How does Grady approach organizational management and mentorship?",
